@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ashmit Yadav | Frontend Developer</title>
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: rgba(255,255,255,0.08);
+      --border: rgba(255,255,255,0.15);
+      --primary: #38bdf8;
+      --secondary: #a855f7;
+      --text: #e5e7eb;
+      --gray: #9ca3af;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", system-ui, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #1e293b, var(--bg));
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    section {
+      padding: 90px 8%;
+    }
+
+    h2, h3 {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 50px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(16px);
+      padding: 60px;
+      border-radius: 26px;
+      max-width: 750px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+    }
+
+    .hero-box h1 {
+      font-size: 52px;
+      font-weight: 800;
+    }
+
+    .hero-box p {
+      margin: 20px 0 35px;
+      color: var(--gray);
+      font-size: 18px;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 30px;
+      margin: 10px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: #000;
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text);
+    }
+
+    .hero-buttons a:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    }
+
+    /* ---------- PROJECTS ---------- */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 35px;
+    }
+
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 30px;
+      backdrop-filter: blur(14px);
+      transition: all 0.35s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+    }
+
+    .project-card h4 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .project-card p {
+      font-size: 15px;
+      color: var(--gray);
+      margin-bottom: 18px;
+    }
+
+    .project-card span {
+      font-size: 13px;
+      color: var(--primary);
+    }
+
+    /* ---------- SKILLS ---------- */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .skill {
+      padding: 16px;
+      text-align: center;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      font-weight: 600;
+      transition: transform 0.3s ease;
+    }
+
+    .skill:hover {
+      transform: scale(1.08);
+    }
+
+    /* ---------- CONTACT ---------- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      backdrop-filter: blur(14px);
+      transition: all 0.35s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+    }
+
+    .contact-card h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .contact-card p {
+      font-size: 14px;
+      color: var(--gray);
+    }
+
+    .contact-card.primary {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #000;
+      font-weight: 700;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 14px;
+      color: var(--gray);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-box">
+      <h1>Ashmit Yadav</h1>
+      <p>Frontend Developer | HTML • CSS • JavaScript  
+      <br/>Building clean, responsive & user-friendly web interfaces</p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="resume.pdf" target="_blank" class="btn-outline">Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <h4>Spotify Clone</h4>
+        <p>Responsive Spotify UI clone using modern CSS and layout techniques.</p>
+        <span>HTML . CSS . JavaScript</span>
+      </div>
+
+      <div class="project-card">
+        <h4>E commerce Website</h4>
+        <p>Frontend E commerce Website for Tech savy gadgets.</p>
+        <span>HTML • CSS • JavaScript</span>
+      </div>
+
+      <div class="project-card">
+        <h4>Admin Dashboard</h4>
+        <p>Frontend dashboard for administration related work.</p>
+        <span>JavaScript • Web APIs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+      <div class="skill">HTML5</div>
+      <div class="skill">CSS3</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Responsive Design</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">UI/UX Basics</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Get In Touch</h2>
+
+    <div class="contact-grid">
+      <a href="mailto:ashmitbro7@gmail.com" class="contact-card">
+        <h4>Email</h4>
+        <p>ashmitbro7@gmail.com</p>
+      </a>
+
+      <a href="https://github.com/ashu-005" target="_blank" class="contact-card">
+        <h4>GitHub</h4>
+        <p>github.com/ashu-005</p>
+      </a>
+
+      <a href="https://linkedin.com/in/ashmit-yadav009/" target="_blank" class="contact-card">
+        <h4>LinkedIn</h4>
+        <p>linkedin.com/in/ashmit-yadav009</p>
+      </a>
+
+      <a href="resume.pdf" target="_blank" class="contact-card primary">
+        <h4>Resume</h4>
+        <p>View / Download</p>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Ashmit Yadav • Frontend Developer
+  </footer>
+
+</body>
+</html>
